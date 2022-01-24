@@ -8,6 +8,10 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    enum TipoDeShortcut: String {
+        case registrarPonto = "RegistrarPonto"
+    }
 
     var window: UIWindow?
 
@@ -35,8 +39,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.viewControllers = [homeController, reciboController]
         tabBarController.selectedViewController = homeController
         
-        window?.rootViewController = tabBarController
+        let navigationController = UINavigationController(rootViewController: tabBarController)
+        navigationController.navigationBar.isHidden = true
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        if let tipo = TipoDeShortcut(rawValue: shortcutItem.type) {
+            
+            switch tipo {
+            case .registrarPonto:
+                
+                let navigationController = window?.rootViewController as? UINavigationController
+                
+                if let tabBarController = navigationController?.viewControllers.first as? UITabBarController {
+                    
+                    navigationController?.popToRootViewController(animated: true)
+                    
+                    if let home = tabBarController.viewControllers?.first as? HomeViewController {
+                        home.tentaAbrirCamera()
+                    }
+                }
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

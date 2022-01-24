@@ -17,6 +17,8 @@
 		030EF1CC26FBE62E000D3E42 /* ReciboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EF1CA26FBE62E000D3E42 /* ReciboViewController.xib */; };
 		030EF1D926FD2A13000D3E42 /* ReciboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030EF1D726FD2A13000D3E42 /* ReciboTableViewCell.swift */; };
 		030EF1DA26FD2A13000D3E42 /* ReciboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EF1D826FD2A13000D3E42 /* ReciboTableViewCell.xib */; };
+		03318BC02731C44500C0F154 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BBE2731C44500C0F154 /* MapaViewController.swift */; };
+		03318BC12731C44500C0F154 /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03318BBF2731C44500C0F154 /* MapaViewController.xib */; };
 		03431DCC270290D200EB8D91 /* FormatadorDeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03431DCB270290D200EB8D91 /* FormatadorDeData.swift */; };
 		03431DD32703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03431DD12703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld */; };
 		03712E93272F51F900B30909 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03712E92272F51F900B30909 /* Perfil.swift */; };
@@ -39,6 +41,8 @@
 		030EF1CA26FBE62E000D3E42 /* ReciboViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciboViewController.xib; sourceTree = "<group>"; };
 		030EF1D726FD2A13000D3E42 /* ReciboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciboTableViewCell.swift; sourceTree = "<group>"; };
 		030EF1D826FD2A13000D3E42 /* ReciboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciboTableViewCell.xib; sourceTree = "<group>"; };
+		03318BBE2731C44500C0F154 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		03318BBF2731C44500C0F154 /* MapaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
 		03431DCB270290D200EB8D91 /* FormatadorDeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatadorDeData.swift; sourceTree = "<group>"; };
 		03431DD22703BD2B00EB8D91 /* Alura_Ponto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alura_Ponto.xcdatamodel; sourceTree = "<group>"; };
 		03712E92272F51F900B30909 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				030EF1B926FBD69B000D3E42 /* AppDelegate */,
 				030EF1BC26FBD6B8000D3E42 /* Home */,
 				030EF1CF26FBE686000D3E42 /* Recibo */,
+				03318BBB2731C3F000C0F154 /* Mapa */,
 				03431DD02703BD0A00EB8D91 /* CoreData */,
 				030EF1AE26FBD61E000D3E42 /* Assets.xcassets */,
 				030EF1B026FBD61E000D3E42 /* LaunchScreen.storyboard */,
@@ -172,6 +177,31 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		03318BBB2731C3F000C0F154 /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				03318BBC2731C40A00C0F154 /* View */,
+				03318BBD2731C41100C0F154 /* Controller */,
+			);
+			path = Mapa;
+			sourceTree = "<group>";
+		};
+		03318BBC2731C40A00C0F154 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03318BBF2731C44500C0F154 /* MapaViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03318BBD2731C41100C0F154 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03318BBE2731C44500C0F154 /* MapaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		03431DD02703BD0A00EB8D91 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +272,7 @@
 				030EF1B226FBD61E000D3E42 /* LaunchScreen.storyboard in Resources */,
 				030EF1AF26FBD61E000D3E42 /* Assets.xcassets in Resources */,
 				030EF1C826FBE529000D3E42 /* HomeViewController.xib in Resources */,
+				03318BC12731C44500C0F154 /* MapaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +285,7 @@
 			files = (
 				030EF1D926FD2A13000D3E42 /* ReciboTableViewCell.swift in Sources */,
 				03FC8D5827306CEE00406136 /* AutenticacaoLocal.swift in Sources */,
+				03318BC02731C44500C0F154 /* MapaViewController.swift in Sources */,
 				038FABF62730973B000922A2 /* Localizacao.swift in Sources */,
 				030EF1CB26FBE62E000D3E42 /* ReciboViewController.swift in Sources */,
 				03431DD32703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld in Sources */,
