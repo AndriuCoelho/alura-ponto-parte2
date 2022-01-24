@@ -128,8 +128,12 @@ extension ReciboViewController: UITableViewDelegate {
 
 extension ReciboViewController: ReciboTableViewCellDelegate {
     func deletarRecibo(_ index: Int) {
-        guard let recibo = buscador.fetchedObjects?[index] else { return }
-        recibo.deletar(contexto)
+        AutenticacaoLocal().autorizaUsuario { autenticado in
+            if autenticado {
+                guard let recibo = self.buscador.fetchedObjects?[index] else { return }
+                recibo.deletar(self.contexto)
+            }
+        }
     }
 }
 
